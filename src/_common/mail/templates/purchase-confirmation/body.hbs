@@ -1,0 +1,51 @@
+{{> header}}
+  <mj-section padding="0">
+    <mj-column>
+
+      <!-- Title -->
+      <mj-text font-size="24px" font-weight="400" color="#000000" padding-bottom="16px">
+        Congratulations on your purchase!
+      </mj-text>
+
+      <!-- Greeting -->
+      <mj-text font-size="16px" color="#000000" padding-bottom="8px">
+        Dear {{data.userName}},
+      </mj-text>
+
+      <!-- Paragraph 1 -->
+      <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+        Thank you for your purchase on Leiaqa 🎉
+      </mj-text>
+
+      <!-- Paragraph 2 -->
+      <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+        You’ve successfully enrolled in the following:
+        <strong>{{data.programTitle}}</strong>
+      </mj-text>
+
+      <!-- Paragraph 3 -->
+      <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+        We’re excited to support you on your learning journey. Start exploring your new program now and take the first step toward earning your certification.
+      </mj-text>
+
+      <!-- Paragraph 4 -->
+      <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+        To access your learning materials, click the button below:
+      </mj-text>
+
+      <!-- CTA Button -->
+      <mj-button align="left" border-radius="6px" background-color="#76003E" color="#ffffff" font-size="16px" padding-bottom="20px" href="{{data.url}}">
+        Start learning now
+      </mj-button>
+
+      <!-- Support Message -->
+      <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+        If you have any questions or need assistance, feel free to reach out to our support team at
+        <a href="mailto:info@leiaq.com" style="color:#660043; text-decoration:underline;">info@leiaq.com</a>.
+      </mj-text>
+
+      <!-- Closing -->
+      <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+        Happy learning!
+      </mj-text>
+{{> footer}}

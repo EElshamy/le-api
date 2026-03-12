@@ -1,0 +1,28 @@
+image: node:12.18.4
+pipelines:
+  branches:
+    staging:
+      - step:
+          name: deployment
+          caches:
+            - node
+          deployment: staging
+          script:
+            - pipe: atlassian/ssh-run:0.2.2
+              variables:
+                SSH_USER: $STAGING_USER
+                SERVER: $STAGING_HOST
+                MODE: 'command'
+                COMMAND: 'cd /var/www/leiaqa/api-leiaqa-staging && git stash && git pull origin staging && sudo n 20.9.0 && npm i && npm run migrate && npm run build && git stash clear && pm2 restart leiaqa-api-staging'
+
+    main:
+      - step:
+          name: deployment
+          deployment: production
+          script:
+            - pipe: atlassian/ssh-run:0.2.2
+              variables:
+                SSH_USER: $PROD_USER
+                SERVER: $PROD_HOST
+                MODE: 'command'
+                COMMAND: 'cd /var/www/leiaqa-v2/api-leiaqa && git stash && git pull origin main && sudo n 20.9.0 && npm i && npm run migrate && npm run build && pm2 restart leiaqa-api'

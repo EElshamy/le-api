@@ -1,0 +1,33 @@
+{{> header}}
+
+  <!-- Title -->
+  <mj-text font-size="28px" font-weight="400" color="#000000" padding-bottom="8px">
+    Reset your password
+  </mj-text>
+
+  <!-- Message -->
+  <mj-text>
+    You’ve requested to reset your password for your Leiaqa account. Please use the following One-Time Password (OTP) to proceed:
+  </mj-text>
+
+  <!-- OTP -->
+  <mj-text font-size="48px" font-weight="bold" color="#780043" align="center" padding="24px 0">
+{{data.otp}}
+  </mj-text>
+
+  <!-- Expiry -->
+  <mj-text>
+    This code will expire after <strong>10 minutes</strong>.
+  </mj-text>
+
+  <!-- If not you -->
+  <mj-text>
+    If you did not request this OTP, you can safely ignore this email.
+  </mj-text>
+
+  <!-- Thank you -->
+  <mj-text>
+    For security reasons, please do not share this OTP with anyone. If you have any issues or need further assistance, contact our support team at <a href="mailto:info@leiaqa.com" colo="#76003E">info@leiaqa.com</a>.
+  </mj-text>
+
+{{> footer}}

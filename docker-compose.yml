@@ -1,0 +1,37 @@
+# services:
+#   db:
+#     container_name: classeshub-postgres
+#     image: postgis/postgis:latest
+#     ports:
+#       - ${DB_PORT}:5432
+#     restart: always
+#     environment:
+#       POSTGRES_USER: ${DB_USER}
+#       POSTGRES_PASSWORD: ${DB_PASS}
+#       POSTGRES_DB: ${DB_NAME}
+#       TZ: Africa/Cairo
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+#     env_file:
+#       - .env
+
+#   redis:
+#     container_name: classeshub-redis
+#     image: redis
+#     restart: always
+#     ports:
+#       - ${REDIS_PORT}:6379
+#     command: ['redis-server', '--requirepass', '${REDIS_PASS}']
+#     volumes:
+#       - redis_data:/data
+#     env_file:
+#       - .env
+
+# volumes:
+#   postgres_data:
+#   redis_data:
+
+# networks:
+#   default:
+#     driver: bridge
+#     name: classeshub_network

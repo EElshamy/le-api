@@ -1,0 +1,233 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+      body {
+        font-family: "Alexandria", serif;
+        margin: 0;
+        padding: 0;
+      }
+      .app-body {
+        padding: 80px 180px;
+      }
+      @media (max-width: 992px) {
+        .app-body {
+          padding: 70px 100px;
+        }
+      }
+      @media (max-width: 787px) {
+        .app-body {
+          padding: 30px 60px;
+        }
+      }
+      @media (max-width: 588px) {
+        .app-body {
+          padding: 35px 24px;
+        }
+      }
+
+      /** Rows background and height except for the header row **/
+      table tr:not(thead tr) {
+        background-color: white;
+        height: 70px;
+      }
+
+      td {
+        padding: 0 24px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      /** Paragraphs inside the rows **/
+      tr > td > p {
+        margin: 0;
+      }
+
+      /** first child inside each cell inside each row **/
+      tr > td:first-child > p:first-child {
+        width: fit-content;
+        min-width: 175px;
+      }
+
+      /** last p child inside each cell inside each row e.g. course type style **/
+      tr > td:first-child > p:last-child {
+        margin: 5px 0 0 0;
+        font-weight: 300;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body class="app-body">
+    <header>
+      <img src="{logo}" alt="logo" width="160" style="margin-bottom: 40px" />
+    </header>
+    <main>
+      <section>
+        <h1 style="font-weight: 500; font-size: '24px'; margin: 0">Invoice</h1>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-wrap: wrap;
+            column-gap: 90px;
+            row-gap: 24px;
+          "
+        >
+          <div style="display: flex; flex-direction: column; gap: 5px">
+            <h2 style="font-weight: 400; font-size: 18px">Provided by:</h2>
+            <p style="margin: 0; font-weight: 300; font-size: 15px">Leiaqa</p>
+            <p style="margin: 0; font-weight: 300; font-size: 15px">
+              Company address
+            </p>
+            <p style="margin: 0; font-weight: 300; font-size: 15px">
+              PO box address
+            </p>
+            <p style="margin: 0; font-weight: 300; font-size: 15px">CR</p>
+            <p style="margin: 0; font-weight: 300; font-size: 15px">VAT No.</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 5px">
+            <h2 style="font-weight: 400; font-size: 18px">Provided to:</h2>
+            <p style="margin: 0; font-size: 15px; font-weight: 300">
+              {providedTo}
+            </p>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              flex-wrap: wrap;
+              margin-top: 14.94px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                flex-wrap: wrap;
+              "
+            >
+              <p style="margin: 0; font-weight: 400">Invoice date:</p>
+              <p style="margin: 0; font-weight: 300; font-size: 15px">
+                {invoiceDate}
+              </p>
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                flex-wrap: wrap;
+              "
+            >
+              <p style="margin: 0; font-weight: 400">Invoice number:</p>
+              <p style="margin: 0; font-weight: 300; font-size: 15px">
+                {invoiceNumber}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="max-width: 100%; overflow: scroll; margin-top: 24px">
+        <div
+          style="
+            border-radius: 12px;
+            overflow: scroll;
+            border: 1px solid #dedad6;
+          "
+        >
+          <table
+            style="
+              width: 100%;
+              padding-bottom: 15px;
+              border-collapse: collapse;
+              border-spacing: 0;
+            "
+          >
+            <thead style="background-color: #f8f5f3">
+              <td
+                style="
+                  padding: 24px;
+                  font-size: 16px;
+                  font-weight: 400;
+                  width: 250px;
+                "
+              >
+                Purchases
+              </td>
+              <td
+                style="
+                  padding: 24px;
+                  font-size: 16px;
+                  font-weight: 400;
+                  width: 250px;
+                "
+              >
+                Price
+              </td>
+              <td
+                style="
+                  padding: 24px;
+                  font-size: 16px;
+                  font-weight: 400;
+                  width: 250px;
+                "
+              >
+                Tax
+              </td>
+              <td
+                style="
+                  padding: 24px;
+                  font-size: 16px;
+                  font-weight: 400;
+                  width: 250px;
+                  white-space: nowrap;
+                "
+              >
+                Amount paid
+              </td>
+            </thead>
+            {tableRaw}
+            <!-- Test#1 - Preview table row -->
+            <!-- <tr>
+              <td>
+                <p>Nutrition and food science terminology.</p>
+                <p>Course</p>
+              </td>
+              <td>
+                <p>$100</p>
+              </td>
+              <td>
+                <p>$1.7</p>
+              </td>
+              <td>
+                <p>$100</p>
+              </td>
+            </tr> -->
+          </table>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 24px;
+            border-radius: 12px;
+            margin-top: 24px;
+            border: 1px solid #dedad6;
+            background: #f8f5f3;
+          "
+        >
+          <p>Total paid amount</p>
+          <p>{totalAmount}</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

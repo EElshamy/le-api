@@ -1,0 +1,44 @@
+{{> header}}
+<mj-section padding="0">
+  <mj-column>
+
+    <!-- Title -->
+    <mj-text font-size="28px" font-weight="400" color="#000000" padding-bottom="16px">
+      Important update on your {{data.programTypeHeader}} submission
+    </mj-text>
+
+    <!-- Greeting -->
+    <mj-text font-size="16px" color="#000000" padding-bottom="8px">
+      Dear {{data.lecturerName}},
+    </mj-text>
+
+    <!-- Paragraph 1 -->
+    <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+      Thank you for submitting your {{data.programTitle}}, for publication on Leiaqa. After careful review, we regret to inform you that your submission has not been approved at this time.
+    </mj-text>
+
+    <!-- Rejection Reason -->
+    <mj-section background-color="#EDEAE7" padding="10px"  border-radius="6px">
+      <mj-column>
+        <mj-text font-size="16px" color="#000000" line-height="1.6">
+          <strong>This decision was based on the following reason(s):</strong><br/>
+          {{data.rejectionReason}}
+        </mj-text>
+      </mj-column>
+  </mj-section>
+    <!-- Paragraph 2 -->
+    <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+      We encourage you to review the feedback and make the necessary adjustments. You can resubmit your {{data.programTitle}} for review by visiting the corresponding editing page on your instructor dashboard.
+    </mj-text>
+
+    <!-- Support Message -->
+    <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+      If you have any questions or need assistance, feel free to reach out to our support team at
+      <a href="mailto:info@leiaq.com" style="color:#660043; text-decoration:underline;">info@leiaq.com</a>.
+    </mj-text>
+
+    <!-- Closing -->
+    <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+      Thank you for your understanding, and we look forward to your resubmission.
+    </mj-text>
+{{> footer}}

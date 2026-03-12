@@ -1,0 +1,19 @@
+{{> header}}
+
+<mj-text font-size="28px" font-weight="400" color="#000000" padding-bottom="8px">
+  Subscription Expired
+</mj-text>
+
+<mj-text font-size="16px" padding="0px 24px" color="#000000">
+  Hi {{data.userName}},
+</mj-text>
+
+<mj-text font-size="16px" padding="4px 24px 12px 24px" color="#000000" line-height="1.6">
+  Unfortunately, your access to <strong>{{data.diplomaName}}</strong> has expired. Don’t worry—you can renew your subscription to continue learning.
+</mj-text>
+
+<mj-button background-color="#76003E" color="#ffffff" font-size="16px" padding="0 0 32px 0" href="{{data.url}}">
+  Renew Subscription
+</mj-button>
+
+{{> footer}}

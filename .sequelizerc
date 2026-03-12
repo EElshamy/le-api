@@ -1,0 +1,13 @@
+const path = require('path');
+
+// For migration: sequelize migration:generate --name "add_email_to_users"
+
+// To generate new migrations from command line: MIG_NAME="add_new" yarn migration:new
+
+module.exports = {
+  'migrations-path': path.join('src/_common/database', 'migrations'),
+  config: path.resolve(
+    'dist/src/_common/database',
+    'database-migrations.config.js'
+  )
+};

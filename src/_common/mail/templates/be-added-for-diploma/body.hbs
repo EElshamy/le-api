@@ -1,0 +1,45 @@
+{{> header}}
+    <mj-section padding="0">
+      <mj-column>
+
+        <!-- Title -->
+        <mj-text font-size="28px" font-weight="400" color="#000000" padding-bottom="16px">
+          Your content has been added to a path 
+        </mj-text>
+
+        <!-- Greeting -->
+        <mj-text font-size="16px" color="#000000" padding-bottom="8px">
+          Dear {{data.lecturerName}},
+        </mj-text>
+
+        <!-- Paragraph 1 -->
+        <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+          We’re pleased to inform you that your content, {{data.programTitle}}, has been incorporated as a component of the {{data.diplomaName}} on Leiaqa.
+        </mj-text>
+
+        <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+          This is a great opportunity to showcase your expertise to a wider audience and contribute to a comprehensive learning experience for students.
+        </mj-text>
+
+        <!-- Paragraph 2 -->
+        <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+          You can view the path and its components on the website by clicking the button below:
+        </mj-text>
+
+        <!-- CTA Button -->
+        <mj-button align="left" border-radius="6px" background-color="#76003E" color="#ffffff" font-size="16px" padding-bottom="20px" href="{{data.url}}">
+          View path
+        </mj-button>
+
+        <!-- Support Message -->
+        <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+          If you have any questions or need assistance, feel free to reach out to our support team at
+          <a href="mailto:info@leiaq.com" style="color:#660043; text-decoration:underline;">info@leiaq.com</a>.
+        </mj-text>
+
+        <!-- Positive Impact -->
+        <mj-text font-size="16px" color="#000000" padding-bottom="12px" line-height="1.6">
+          Thank you for being a valuable part of the Leiaqa community!
+        </mj-text>
+
+{{> footer}}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geidea Checkout Test</title>
+  <script src="https://www.merchant.geidea.net/hpp/geideaCheckout.min.js"></script>
+</head>
+<body>
+
+  <button id="payBtn">Start Payment</button>
+
+  <script>
+
+    const sessionId = "878cbecf-2c8b-432d-ea09-08ddbefdcd69";
+
+    function onSuccess(data) {
+      alert("Payment Success:\n" + JSON.stringify(data, null, 2));
+      console.log("Success:", data);
+    }
+
+    function onError(data) {
+      alert("Payment Error:\n" + JSON.stringify(data, null, 2));
+      console.error("Error:", data);
+    }
+
+    function onCancel(data) {
+      alert("Payment Cancelled:\n" + JSON.stringify(data, null, 2));
+      console.warn("Cancelled:", data);
+    }
+
+    const payment = new GeideaCheckout(onSuccess, onError, onCancel);
+
+    document.getElementById("payBtn").addEventListener("click", () => {
+      payment.startPayment(sessionId);
+    });
+  </script>
+
+</body>
+</html>

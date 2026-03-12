@@ -1,0 +1,54 @@
+{{> header}}
+
+<!-- Title -->
+<mj-text font-size="28px" font-weight="400" color="#000000" padding-bottom="8px">
+  New learning opportunity
+</mj-text>
+
+<!-- Greeting -->
+<mj-text font-size="16px" padding="0px 24px" color="#000000">
+  Dear {{data.userName}},
+</mj-text>
+
+<!-- Intro -->
+<mj-text font-size="16px" padding="4px 24px 12px 24px" color="#000000" line-height="1.6">
+  We’re excited to announce a new learning opportunity on Leiaqa!
+</mj-text>
+
+<!-- Course image -->
+<mj-image 
+  src="{{data.programImageUrl}}" 
+  alt="Course Image" 
+  border-radius="12px" 
+  padding="0 24px 16px 24px" 
+  max-height="212px" 
+  width="424px" 
+/>
+
+<!-- Course title -->
+<mj-text font-size="20px" font-weight="bold" color="#000000" align="center" padding="0 0 8px 0">
+  {{data.programTitle}}
+</mj-text>
+
+<!-- Course details -->
+<mj-text font-size="14px" color="#4B4B4B" align="center" padding="0 0 12px 0">
+  {{data.programType}} ・ {{data.programLevel}}
+</mj-text>
+
+<!-- Course description -->
+<mj-text font-size="16px" color="#4B4B4B" align="center" line-height="1.6" padding="0 0 24px 0">
+  {{data.programSummary}}
+</mj-text>
+
+<!-- CTA button -->
+<mj-button background-color="#76003E" color="#ffffff" font-size="16px" padding="0 0 32px 0" href="{{data.url}}">
+  Explore now
+</mj-button>
+
+<!-- Support text -->
+<mj-text font-size="14px" color="#000000" line-height="1.6" padding="0px 24px">
+  If you have any questions or need assistance, feel free to reach out to our support team at
+  <a href="info@leiaqa.com" style="color:#76003E; text-decoration: underline;">info@leiaqa.com</a>.
+</mj-text>
+
+{{> footer}}
